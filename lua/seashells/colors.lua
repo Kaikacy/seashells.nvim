@@ -1,0 +1,22 @@
+return {
+	fg = "#deb88d", -- same as white
+	bg = "#09141b",
+	altbg = "#112634",
+	selbg = "#1e4962",
+	black = "#17384c",
+	brblack = "#434b53",
+	red = "#d15123",
+	brred = "#d48678",
+	green = "#027c9b",
+	brgreen = "#62898",
+	yellow = "#fca02f",
+	bryellow = "#fdd39f",
+	blue = "#1e4950",
+	brblue = "#1bbcdd",
+	purple = "#68d4f1",
+	brpurple = "#bbe3ee",
+	cyan = "#50a3b5",
+	brcyan = "#87acb4",
+	white = "#deb88d",
+	brwhite = "#fee4ce",
+}
