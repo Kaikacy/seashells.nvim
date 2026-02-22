@@ -1,7 +1,7 @@
 return {
 	fg = "#deb88d", -- same as white
 	bg = "#09141b",
-	altbg = "#112634",
+	altbg = "#112634", -- isn't in original palette, lighter bg
 	selbg = "#1e4962",
 	curbg = "#08131a",
 	curfg = "#fca02f", -- same as yellow
@@ -13,7 +13,7 @@ return {
 	brgreen = "#628d98",
 	yellow = "#fca02f",
 	bryellow = "#fdd39f",
-	blue = "#1e4950",
+	blue = "#215159", -- 3% lighter than original
 	brblue = "#1bbcdd",
 	cyan = "#68d4f1", -- terminal color purple
 	brcyan = "#bbe3ee", -- terminal color bright purple

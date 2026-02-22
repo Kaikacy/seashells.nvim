@@ -25,7 +25,7 @@ function M.get()
 		WinSeparator = { fg = c.altbg },
 		-- Folded
 		-- SignColumn
-		LineNr = { fg = c.blue },
+		LineNr = { fg = c.brblack },
 		CursorLineNr = { bg = c.altbg, fg = c.green },
 		MatchParen = { fg = c.cyan, bold = true },
 		ModeMsg = { fg = c.green },
@@ -44,7 +44,7 @@ function M.get()
 		qfLineNr = { fg = c.brgreen },
 		qfSeparator1 = { fg = c.brwhite },
 		qfSeparator2 = { link = "qfSeparator1" },
-		SpecialKey = { fg = c.blue },
+		SpecialKey = { fg = c.brblack, italic = true },
 		-- SpellBad
 		-- SpellCap
 		-- SpellLocal
@@ -61,29 +61,28 @@ function M.get()
 		-- TODO: refine even more
 		--- Syntax ---
 		Comment = {
-			fg = c.brblack,
+			fg = c.blue,
 			italic = vim.g.seashells_italic_comments == nil and true or vim.g.seashells_italic_comments,
 		},
 		Function = { fg = c.brteal },
 		String = { fg = c.green },
 		Identifier = { fg = c.bryellow },
-		-- StorageClass
 		Type = { fg = c.teal },
 		Keyword = { fg = c.brgreen },
 		Constant = { fg = c.red },
 		Boolean = { link = "Constant" },
 		Character = { link = "String" },
 		Number = { link = "Constant" },
-		-- Label,
+		Label = { fg = c.brgreen, italic = true },
 		Operator = { fg = c.brwhite },
 		Delimiter = { fg = c.brwhite },
 		Special = { fg = c.cyan }, -- todo
-		-- Statement
-		Structure = { fg = c.yellow },
+		Statement = { fg = c.bryellow },
+		Structure = { fg = c.brcyan },
 		Todo = { fg = c.green, bold = true },
 		PreProc = { fg = c.brgreen, bold = true },
 		Error = { fg = c.black, bg = c.red },
-		Added = { fg = c.teal },
+		Added = { fg = c.green },
 		Removed = { fg = c.red },
 		Changed = { fg = c.brgreen },
 
@@ -116,9 +115,9 @@ function M.get()
 		DiagnosticSignOk = { fg = c.green, bold = true },
 
 		--- LSP ---
-		LspCodeLens = { fg = c.blue },
+		LspCodeLens = { fg = c.brblack },
 		LspCodeLensSeparator = { fg = c.black },
-		LspInlayHint = { fg = c.blue },
+		LspInlayHint = { fg = c.brblack },
 		LspReferenceText = { bg = c.altbg, bold = true },
 		LspReferenceRead = { link = "LspReferenceText" },
 		LspReferenceWrite = { link = "LspReferenceText" },
@@ -129,32 +128,36 @@ function M.get()
 
 		--- Treesitter ---
 		["@variable"] = { fg = c.fg },
-		["@variable.builtin"] = { italic = true },
-		["@variable.parameter.builtin"] = { italic = true },
+		["@variable.builtin"] = { fg = c.yellow },
+		["@variable.parameter.builtin"] = { fg = c.yellow },
 		["@constructor"] = { fg = c.teal },
-		["@module.builtin"] = { fg = c.yellow },
-		["@constant.builtin"] = { link = "Constant" },
-		["@type.builtin"] = { fg = c.teal },
-		["@string.regexp"] = { fg = c.brteal },
-		["@string.escape"] = { fg = c.brteal },
+		["@module.builtin"] = { link = "@module" },
+		["@constant.builtin"] = { link = "@constant" },
+		["@type.builtin"] = { fg = c.brblue },
+		["@string.regexp"] = { fg = c.brblue },
+		["@string.escape"] = { fg = c.brblue },
+		["@function.builtin"] = { italic = true, fg = c.brteal },
 		["@keyword.modifier"] = { fg = c.brgreen, italic = true },
-		["@keyword.coroutine"] = { fg = c.brgreen, italic = true },
 		["@keyword.directive"] = { fg = c.brgreen, bold = true },
 		["@keyword.directive.define"] = { fg = c.brgreen, bold = true },
 		["@keyword.debug"] = { fg = c.brgreen, bold = true },
 		["@keyword.conditional.ternary"] = { link = "Operator" },
-		["@attribute"] = { italic = true },
-		["@attribute.builtin"] = { italic = true, fg = c.cyan },
+		["@attribute"] = { italic = true, fg = c.brred },
+		["@attribute.builtin"] = { italic = true, fg = c.brred },
 		["@punctuation.special"] = { link = "@punctuation" },
 		["@markup.heading.2"] = { fg = c.teal, bold = true },
 		["@markup.heading.3"] = { fg = c.green, bold = true },
-		["@markup.heading.4"] = { fg = c.red },
-		["@markup.heading.5"] = { fg = c.yellow },
-		["@markup.heading.6"] = { fg = c.fg },
-		["@markup.quote"] = { fg = c.brteal },
+		["@markup.heading.4"] = { fg = c.brgreen, bold = true },
+		["@markup.heading.5"] = { fg = c.brteal, bold = true },
+		["@markup.heading.6"] = { fg = c.fg, bold = true },
+		["@markup.quote"] = { fg = c.brgreen },
 		["@tag"] = { fg = c.brgreen },
 		["@tag.attribute"] = { link = "@attribute" },
 		["@tag.builtin"] = { fg = c.brgreen, italic = true },
+
+		--- LSP semantic highlight ---
+		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+		["@lsp.typemod.type.defaultLibrary"] = { link = "@type.builtin" },
 	}
 end
 
