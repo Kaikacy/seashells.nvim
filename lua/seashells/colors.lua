@@ -13,7 +13,7 @@ return {
 	brgreen = "#628d98",
 	yellow = "#fca02f",
 	bryellow = "#fdd39f",
-	blue = "#215159", -- 3% lighter than original
+	blue = "#23565f", -- 5% lighter than original
 	brblue = "#1bbcdd",
 	cyan = "#68d4f1", -- terminal color purple
 	brcyan = "#bbe3ee", -- terminal color bright purple
