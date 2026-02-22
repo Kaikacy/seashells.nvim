@@ -158,6 +158,20 @@ function M.get()
 		--- LSP semantic highlight ---
 		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
 		["@lsp.typemod.type.defaultLibrary"] = { link = "@type.builtin" },
+
+		--- PLUGINS ---
+		-- blink.cmp
+		BlinkCmpLabelMatch = { link = "PmenuMatch" },
+		-- mini.icons
+		MiniIconsAzure = { fg = c.teal },
+		MiniIconsBlue = { fg = c.brblue },
+		MiniIconsCyan = { fg = c.cyan },
+		MiniIconsGreen = { fg = c.green },
+		MiniIconsGray = { fg = c.brteal },
+		MiniIconsOrange = { fg = c.yellow },
+		MiniIconsPurple = { fg = c.brred },
+		MiniIconsRed = { fg = c.red },
+		MiniIconsYellow = { fg = c.bryellow },
 	}
 end
 
