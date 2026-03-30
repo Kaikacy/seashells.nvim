@@ -10,20 +10,20 @@ function M.get()
 		Conceal = { fg = c.brback },
 		CurSearch = { bg = c.yellow, fg = c.bg },
 		Search = { bg = c.blue, fg = c.brwhite },
-		-- Cursor = { bg = c.curfg, fg = c.curbg },
+		Cursor = { bg = c.curfg, fg = c.curbg },
 		CursorLine = { bg = c.altbg },
 		CursorColumn = { link = "CursorLine" },
 		Directory = { fg = c.yellow },
-		-- DiffAdd
-		-- DiffChange
-		-- DiffDelete
-		-- DiffText
+		DiffAdd = { fg = c.green, bg = c.altbg },
+		DiffChange = { bg = c.altbg },
+		DiffDelete = { bg = c.altbg, fg = c.red, bold = true },
+		DiffText = { bg = c.black, fg = c.teal },
 		NonText = { fg = c.black },
 		TermCursor = { fg = c.curbg, bg = c.curfg },
 		ErrorMsg = { fg = c.bg, bg = c.red, bold = true },
 		WarningMsg = { fg = c.yellow, bold = true },
 		WinSeparator = { fg = c.altbg },
-		-- Folded
+		Folded = { bg = c.bg, fg = c.brblack, underline = true },
 		-- SignColumn
 		LineNr = { fg = c.brblack },
 		CursorLineNr = { bg = c.altbg, fg = c.green },
@@ -44,7 +44,7 @@ function M.get()
 		qfLineNr = { fg = c.brgreen },
 		qfSeparator1 = { fg = c.brwhite },
 		qfSeparator2 = { link = "qfSeparator1" },
-		SpecialKey = { fg = c.brblack, italic = true },
+		SpecialKey = { fg = c.brblack, underline = true },
 		-- SpellBad
 		-- SpellCap
 		-- SpellLocal
@@ -73,7 +73,7 @@ function M.get()
 		Boolean = { link = "Constant" },
 		Character = { link = "String" },
 		Number = { link = "Constant" },
-		Label = { fg = c.brgreen, italic = true },
+		Label = { fg = c.brred, italic = true },
 		Operator = { fg = c.brwhite },
 		Delimiter = { fg = c.brwhite },
 		Special = { fg = c.cyan }, -- todo
@@ -81,7 +81,7 @@ function M.get()
 		Structure = { fg = c.brcyan },
 		Todo = { fg = c.green, bold = true },
 		PreProc = { fg = c.brgreen, bold = true },
-		Error = { fg = c.black, bg = c.red },
+		Error = { fg = c.bg, bg = c.red },
 		Added = { fg = c.green },
 		Removed = { fg = c.red },
 		Changed = { fg = c.brgreen },
@@ -131,9 +131,9 @@ function M.get()
 		["@variable.builtin"] = { fg = c.yellow },
 		["@variable.parameter.builtin"] = { fg = c.yellow },
 		["@constructor"] = { fg = c.teal },
-		["@module.builtin"] = { link = "@module" },
-		["@constant.builtin"] = { link = "@constant" },
-		["@type.builtin"] = { fg = c.brblue },
+		["@module.builtin"] = { fg = c.brcyan, italic = true },
+		["@constant.builtin"] = { fg = c.yellow },
+		["@type.builtin"] = { fg = c.teal, italic = true },
 		["@string.regexp"] = { fg = c.brblue },
 		["@string.escape"] = { fg = c.brblue },
 		["@function.builtin"] = { italic = true, fg = c.brteal },
