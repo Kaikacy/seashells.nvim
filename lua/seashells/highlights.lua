@@ -158,6 +158,11 @@ function M.get()
 		--- LSP semantic highlight ---
 		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
 		["@lsp.typemod.type.defaultLibrary"] = { link = "@type.builtin" },
+		["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
+
+		-- lua
+		["@lsp.typemod.variable.definition.lua"] = { link = "@variable.builtin" },
+		["@lsp.typemod.variable.defaultLibrary.lua"] = { link = "@module.builtin" },
 
 		--- PLUGINS ---
 		-- blink.cmp
